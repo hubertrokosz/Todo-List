@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>My Project</title>
+    <script src="bundle.js" defer></script>
 </head>
 <body>
-    <div id="app"></div>
-    <script src="bundle.js"></script>
+    <div id="container">
+        <div id="nav">
+
+            <button id="task">Add task</button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span id="close">&times;</span>
+                    <form id="myForm">
+                        <label for="title">Title:</label><br>
+                        <input type="text" id="title" name="title"><br>
+
+                        <label for="description">Description:</label><br>
+                        <textarea name="description" id="description"></textarea><br>
+
+                        <label for="dueDate">Due date:</label><br>
+                        <input type="date" name="dueDate" id="dueDate"><br>
+
+                        <label for="priority">Priority:</label><br>
+                        <select name="priority" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select><br>
+
+                        <input type="submit" value="Submit">
+                    </form> 
+                </div>
+            </div>
+
+        </div>
+        <div id="projects">
+            <div class="project">
+                <span class="element first">Projects</span>
+                <div class="element second highPriority">
+                    <span class="title">Study</span>
+                    <span class="desc">Study for biology exam</span>
+                    <span class="dueDate">Tomorrow</span>
+                </div>
+                <div class="element second lowPriority">
+                    <span class="title">Play guitar</span>
+                    <span class="desc">Practice playing guitar</span>
+                    <span class="dueDate">This week</span>
+                </div>
+                <div class="element second mediumPriority">
+                    <span class="title">Clean</span>
+                    <span class="desc">Clean kitchen sink</span>
+                    <span class="dueDate">Today</span>
+                </div>
+            </div>  
+        </div>
+    </div>
 </body>
 </html>

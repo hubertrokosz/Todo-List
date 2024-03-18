@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\n    background-color: red;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\n    background-color: #3c3c3c;\n    margin: 0;\n    padding: 0;\n}\n\n#container {\n    display: grid;\n    grid-template-columns: 1fr 4fr;\n    height: 100vh;\n}\n\n#nav {\n    background-color: coral;\n}\n\n#projects {\n    background-color: #3c3c3c;\n    padding: 20px;\n}\n\n.project {\n    height: 600px;\n    width: 400px;\n    background-color: darkolivegreen;\n}\n\n.modal {\n    display: none; \n    position: fixed; \n    z-index: 1; \n    left: 0;\n    top: 0;\n    width: 100%; \n    height: 100%; \n    overflow: auto; \n    background-color: rgba(0,0,0,0.4); \n}\n\n.modal-content {\n    background-color: #fefefe;\n    margin: 15% auto;\n    padding: 20px;\n    border: 1px solid #888;\n    width: 80%;\n}\n\n#close {\n    color: #aaa;\n    float: right;\n    font-size: 28px;\n    font-weight: bold;\n}\n\n#close:hover,\n#close:focus {\n    color: black;\n    text-decoration: none;\n    cursor: pointer;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,13 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/createTodo.js":
+/*!***************************!*\
+  !*** ./src/createTodo.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   createTodo: () => (/* binding */ createTodo)\n/* harmony export */ });\nfunction createTodo(title, description, dueDate, priority, notes, checklist) {\n    return {\n        title: title,\n        description: description,\n        dueDate: dueDate,\n        priority: priority,\n        notes: notes,\n        checklist: checklist\n    };\n}\n\n//const todo1 = createTodo(\"Clean\", \"Clean my room\");\n//console.log(todo1.title);\n\n\n\n//# sourceURL=webpack://todo-list/./src/createTodo.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modalManager_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modalManager.js */ \"./src/modalManager.js\");\n/* harmony import */ var _createTodo_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createTodo.js */ \"./src/createTodo.js\");\n\n\n\n\n\n(0,_modalManager_js__WEBPACK_IMPORTED_MODULE_1__.initModal)();\n\ndocument.getElementById('myForm').addEventListener('submit', function(event) {\n    event.preventDefault();\n\n    const formData = new FormData(this);\n    const formProps = Object.fromEntries(formData);\n\n    // Assuming 'checklist' is an array of selected values, gather those separately\n    const checklist = formData.getAll('checklist');\n\n    // Call the factory function with the collected form data\n    const todoItem = (0,_createTodo_js__WEBPACK_IMPORTED_MODULE_2__.createTodo)(\n        formProps.title,\n        formProps.description,\n        formProps.dueDate,\n        formProps.priority,\n        formProps.notes,\n        checklist // Pass the array of checklist items\n    );\n\n    console.log(todoItem);\n    (0,_modalManager_js__WEBPACK_IMPORTED_MODULE_1__.closeModal)();\n});\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modalManager.js":
+/*!*****************************!*\
+  !*** ./src/modalManager.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   closeModal: () => (/* binding */ closeModal),\n/* harmony export */   initModal: () => (/* binding */ initModal)\n/* harmony export */ });\nconst modal = document.getElementById('myModal');\n\nfunction closeModal() {\n    if (modal) modal.style.display = \"none\";\n}\n\nfunction initModal() {\n    const addTask = document.getElementById('task');\n    const span = document.getElementById('close');\n    \n    if (addTask) {\n        addTask.addEventListener('click', function() {\n            modal.style.display = \"block\";\n        });\n    }\n    \n    if (span) {\n        span.addEventListener('click', closeModal);\n    }\n    \n    window.addEventListener('click', function(event) {\n        if (event.target == modal) {\n            closeModal();\n        }\n    });\n}\n\n\n\n//# sourceURL=webpack://todo-list/./src/modalManager.js?");
 
 /***/ })
 
