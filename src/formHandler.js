@@ -1,5 +1,6 @@
 import { closeModal } from './modalManager.js';
 import { createTodo } from './createTodo.js';
+import { domCreator } from './domCreator.js';
 
 function setMinimumDueDate() {
     const today = new Date();
@@ -26,6 +27,9 @@ function handleFormSubmission(formId) {
         );
     
         console.log(todoItem);
+
+        domCreator(todoItem);
+
         closeModal();
     });
 }

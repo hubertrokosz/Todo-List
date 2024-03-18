@@ -6,13 +6,39 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     height: 100vh;
 }
 
 #nav {
-    background-color: coral;
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }
+
+#task {
+    height: 75px;
+    width: 150px;
+    background-color: #99c140;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#task:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+#task:active {
+    background-color: #3e8e41;
+    transform: scale(1);
+  }
 
 #projects {
     background-color: #aaa;
@@ -20,7 +46,6 @@ body {
 }
 
 .project {
-    height: 600px;
     width: 400px;
     background-color: #444444;
     display: flex;
