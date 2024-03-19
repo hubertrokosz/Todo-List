@@ -13,11 +13,13 @@ body {
 #nav {
     background-color: #444444;
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding: 25px;
+    flex-direction: column; 
+    gap: 25px;
 }
 
-#task {
+.btn {
     height: 75px;
     width: 150px;
     background-color: #99c140;
@@ -30,12 +32,12 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-#task:hover {
+.btn:hover {
     background-color: #45a049;
     transform: scale(1.05);
   }
   
-#task:active {
+.btn:active {
     background-color: #3e8e41;
     transform: scale(1);
   }
@@ -43,6 +45,9 @@ body {
 #projects {
     background-color: #aaa;
     padding: 20px;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
 }
 
 .project {
@@ -70,6 +75,7 @@ body {
     font-size: 1.1em;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .modal {

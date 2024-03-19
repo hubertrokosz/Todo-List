@@ -1,6 +1,6 @@
-function domCreator(todoItem) {
+function createTask(todoItem) {
 
-    const project = document.getElementById('project');
+    const project = document.querySelector(`[data-id="${todoItem.projectName}"]`);
     const priority = document.createElement('div');
     priority.classList.add('element', 'second');
 
@@ -43,6 +43,39 @@ function domCreator(todoItem) {
     };
 
     priority.appendChild(button);
+
+}
+
+function updateDropdown(containerId) {
+    const dropdown = document.getElementById('containerSelect');
+    const option = document.createElement('option');
+    option.value = containerId;
+    option.textContent = containerId;
+    dropdown.appendChild(option);
+  }
+
+function createProject() {
+    const addProject = document.getElementById('newProject');
+
+    addProject.addEventListener('click', () => {
+        const project = document.getElementById('projects');
+        const projectName = prompt('Enter new project name');
+        
+        if (projectName) {
+            const container = document.createElement('div');
+        
+            container.setAttribute('data-id', projectName);
+            container.classList.add('project');
+            project.appendChild(container);
+    
+            const span = document.createElement('span');
+            span.classList.add('element', 'first');
+            span.textContent = projectName;
+            container.appendChild(span);
+
+            updateDropdown(projectName);
+        }
+    });
 }
 
 function deleteTodo() {
@@ -56,4 +89,4 @@ function deleteTodo() {
       });
 }
 
-export { domCreator, deleteTodo };
+export { createTask, deleteTodo, createProject };

@@ -9,12 +9,18 @@
     <div id="container">
         <div id="nav">
 
-            <button id="task">Add task</button>
+            <button id="task" class="btn">Add task</button>
+
+            <button id="newProject" class="btn">New project</button>
 
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span id="close">&times;</span>
                     <form id="myForm">
+                        <select id="containerSelect" name="containerSelect" required>
+                            <option value="">Select a project</option>
+                            <option value="Projects">Projects</option>
+                        </select><br>
                         <label for="title">Title:</label><br>
                         <input type="text" id="title" name="title"><br>
 
@@ -38,7 +44,7 @@
 
         </div>
         <div id="projects">
-            <div id="project" class="project">
+            <div data-id="Projects" class="project">
                 <span class="element first">Projects</span>
                 <div class="element second highPriority">
                     <span class="title">Study</span>

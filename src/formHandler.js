@@ -1,6 +1,6 @@
 import { closeModal } from './modalManager.js';
 import { createTodo } from './createTodo.js';
-import { domCreator } from './domCreator.js';
+import { createTask } from './domCreator.js';
 
 function setMinimumDueDate() {
     const today = new Date();
@@ -20,15 +20,16 @@ function handleFormSubmission(formId) {
         const formProps = Object.fromEntries(formData);
 
         const todoItem = createTodo(
+            formProps.containerSelect,
             formProps.title,
             formProps.description,
             formProps.dueDate,
             formProps.priority,
         );
-    
-        console.log(todoItem);
 
-        domCreator(todoItem);
+        createTask(todoItem);
+
+        this.reset();
 
         closeModal();
     });
