@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>My Project</title>
     <script src="bundle.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="container">
@@ -22,16 +23,16 @@
                             <option value="Projects">Projects</option>
                         </select><br>
                         <label for="title">Title:</label><br>
-                        <input type="text" id="title" name="title"><br>
+                        <input type="text" id="title" name="title" required><br>
 
                         <label for="description">Description:</label><br>
-                        <textarea name="description" id="description"></textarea><br>
+                        <textarea name="description" id="description" required></textarea><br>
 
                         <label for="dueDate">Due date:</label><br>
-                        <input type="date" name="dueDate" id="dueDate"><br>
+                        <input type="date" name="dueDate" id="dueDate" required><br>
 
                         <label for="priority">Priority:</label><br>
-                        <select name="priority" id="priority">
+                        <select name="priority" id="priority" required>
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
@@ -46,24 +47,6 @@
         <div id="projects">
             <div data-id="Projects" class="project">
                 <span class="element first">Projects</span>
-                <div class="element second highPriority">
-                    <span class="title">Study</span>
-                    <span class="desc">Study for biology exam</span>
-                    <span class="dueDate">Tomorrow</span>
-                    <button>&times;</button>
-                </div>
-                <div class="element second lowPriority">
-                    <span class="title">Play guitar</span>
-                    <span class="desc">Practice playing guitar</span>
-                    <span class="dueDate">This week</span>
-                    <button>&times;</button>
-                </div>
-                <div class="element second mediumPriority">
-                    <span class="title">Clean</span>
-                    <span class="desc">Clean kitchen sink</span>
-                    <span class="dueDate">Today</span>
-                    <button>&times;</button>
-                </div>
             </div>  
         </div>
     </div>
