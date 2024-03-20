@@ -68,14 +68,18 @@ function delegateEvent() {
         while (targetElement != this) {
             if (targetElement.tagName === 'BUTTON') {
                 if (targetElement.classList.contains('complete-btn')) {
-                    console.log('button1 clicked');
                     targetElement.parentNode.classList.toggle('completed');
                     storeData();
                 }
                 else if (targetElement.classList.contains('delete-btn')) {
-                    console.log('button 2clicked');
                     targetElement.parentNode.remove();
                     storeData();
+                }
+                else if (targetElement.classList.contains('delete-project')) {
+                    //console.log('button3 clicked');
+                    deleteDropDown();
+                    targetElement.parentNode.parentNode.remove();
+                    
                 }
                 break;
             }
@@ -92,13 +96,32 @@ function updateDropdown(containerId) {
     dropdown.appendChild(option);
   }
 
+function deleteDropDown() {
+    const dropdown = document.getElementById('containerSelect');
+
+    const spans = document.querySelectorAll('.element.first');
+
+    spans.forEach(element => {
+        let newElement = element.textContent.slice(0, -1);
+        console.log(newElement);
+        for (let i = 0; i < dropdown.options.length; i++) {
+            if (newElement == dropdown.options[i].value) {
+                dropdown.remove(i);
+                break;
+            }
+        }
+    });
+
+    
+}
+
 function createProject() {
     const addProject = document.getElementById('newProject');
 
     addProject.addEventListener('click', () => {
         const project = document.getElementById('projects');
         const projectName = prompt('Enter new project name');
-        
+
         if (projectName) {
             const container = document.createElement('div');
         
@@ -111,6 +134,11 @@ function createProject() {
             span.textContent = projectName;
             container.appendChild(span);
 
+            const deleteProjectBtn = document.createElement('button');
+            deleteProjectBtn.textContent = "x";
+            deleteProjectBtn.classList.add('delete-project');
+            span.appendChild(deleteProjectBtn);
+
             updateDropdown(projectName);
         }
     });
@@ -118,4 +146,27 @@ function createProject() {
     storeData();
 }
 
-export { createTask, createProject, delegateEvent };
+function createFirstProject() {
+    const project = document.getElementById('projects');
+    const projectName = 'Projects';
+
+    const container = document.createElement('div');
+        
+    container.setAttribute('data-id', projectName);
+    container.classList.add('project');
+    project.appendChild(container);
+    
+    const span = document.createElement('span');
+    span.classList.add('element', 'first');
+    span.textContent = projectName;
+    container.appendChild(span);
+
+    const deleteProjectBtn = document.createElement('button');
+    deleteProjectBtn.textContent = "x";
+    deleteProjectBtn.classList.add('delete-project');
+    span.appendChild(deleteProjectBtn);
+
+    updateDropdown(projectName);
+}
+
+export { createTask, createProject, delegateEvent, createFirstProject };
